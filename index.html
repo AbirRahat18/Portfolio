@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1424" />
+    <meta
+      name="description"
+      content="Abir Ahmed Rahat is an independent frontend developer in Dhaka building thoughtful, high-performing digital experiences."
+    />
+    <title>Abir Ahmed Rahat — Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: { ink: "#0b1424", lime: "#c6f36a", paper: "#f3f6fb" },
+              fontFamily: {
+                sans: ["Plus Jakarta Sans", "sans-serif"],
+                heading: ["Plus Jakarta Sans", "sans-serif"],
+                body: ["Plus Jakarta Sans", "sans-serif"],
+                mono: ["Plus Jakarta Sans", "sans-serif"],
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-ink font-body text-paper antialiased selection:bg-lime selection:text-ink"
+  >
+    <div class="page-grain" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="#hero" aria-label="Abir Ahmed Rahat home"
+          ><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" focusable="false"><path class="brand-mark-shell" d="M20 3.8 34.2 12v16L20 36.2 5.8 28V12z"/><path d="m11.5 26.5 7-14h3l7 14M14.5 21h11M25.5 27l4-8"/></svg></span
+          ><span class="brand-name"
+            >&lt;rahat<span class="text-lime">/</span>dev&gt;</span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#work">Work</a><a href="#about">About</a
+          ><a href="#skills">Skills</a><a href="#services">Services</a
+          ><a href="#testimonials">Testimonials</a
+          ><a class="nav-contact" href="#contact"
+            >Let’s talk <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero section-wrap" id="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span>FRONTEND DEVELOPER</span>
+            <span class="eyebrow-divider">/</span>
+            <span>DHAKA, BD</span>
+          </div>
+          <h1 id="hero-title">
+            <span class="hero-title-line">Frontend</span>
+            <span class="hero-title-line hero-title-accent">
+              Web Developer<span class="hero-spark" aria-hidden="true"></span>
+            </span>
+          </h1>
+          <p class="hero-intro">
+            I design and build fast, responsive websites and React interfaces
+            that turn good ideas into clear, useful digital experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-lime " href="#contact">
+              Hire me <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-outline" href="assets/abir-ahmed-rahat-cv.pdf" download="Abir-Ahmed-Rahat-CV.pdf">
+              Download CV <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="hero-art"
+          role="img"
+          aria-label="Portrait of Abir Ahmed Rahat"
+        >
+          <div class="hero-dynamic" aria-hidden="true"></div>
+          <div class="portrait-wrap">
+            <img
+              class="portrait"
+              src="assets/rahat-portrait.jpg"
+              alt="Portrait of Abir Ahmed Rahat"
+              fetchpriority="high"
+            />
+          </div>
+          <span class="hero-code-mark hero-code-angle" aria-hidden="true">&lt;&gt;</span>
+          <span class="hero-code-mark hero-code-braces" aria-hidden="true">{ }</span>
+        </div>
+      </section>
+      <section class="ticker" aria-label="What I do">
+        <div class="ticker-track" aria-hidden="true">
+          <div class="ticker-group">
+            <span>Thoughtful interfaces</span><i></i>
+            <span>Design to development</span><i></i>
+            <span>Built for people</span><i></i>
+            <span>Frontend by Abir Ahmed Rahat</span><i></i>
+          </div>
+          <div class="ticker-group">
+            <span>Thoughtful interfaces</span><i></i>
+            <span>Design to development</span><i></i>
+            <span>Built for people</span><i></i>
+            <span>Frontend by Abir Ahmed Rahat</span><i></i>
+          </div>
+        </div>
+      </section>
+      <section class="work-section section-wrap section-pad" id="work">
+        <div class="section-heading reveal">
+          <div>
+            <h2>
+              A few things<br />I’ve
+              <span class="serif-accent">put out  </span>  there.
+            </h2>
+            <p class="section-description">Selected websites and product experiences, designed to feel clear, useful, and memorable.</p>
+          </div>
+        </div>
+        <div class="work-toolbar reveal">
+          <div class="filter-list" role="group" aria-label="Filter projects">
+            <button class="filter-chip active" type="button" data-filter="all">
+              All work
+            </button>
+            <button class="filter-chip" type="button" data-filter="web">
+              Web design
+            </button>
+            <button class="filter-chip" type="button" data-filter="product">
+              Product
+            </button>
+          </div>
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <a
+            class="project-card project-card-link reveal"
+            href="details.html?type=project&amp;id=folio"
+            aria-label="View Folio Studio project details"
+            data-category="web"
+            data-project="folio"
+          >
+            <div class="project-visual visual-folio">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+                alt="Minimal creative studio workspace with warm afternoon light"
+                loading="lazy"
+              /><span class="visual-label visual-label-dark">FOLIO</span
+              ><span class="visual-arrow">↗</span>
+            </div>
+            <div class="project-caption">
+              <div>
+                <h3>Folio Studio</h3>
+                <p>An image-led portfolio that gives a small creative studio a clear digital home.</p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="project-card project-card-link reveal"
+            href="details.html?type=project&amp;id=flora"
+            aria-label="View Flora project details"
+            data-category="product"
+            data-project="flora"
+          >
+            <div class="project-visual visual-flora">
+              <img
+                src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=85"
+                alt="Sunlit plants and a calm home interior"
+                loading="lazy"
+              /><span class="visual-label"
+                >flora<span class="flora-dot">.</span></span
+              ><span class="visual-arrow">↗</span>
+            </div>
+            <div class="project-caption">
+              <div>
+                <h3>Flora</h3>
+                <p>A friendly plant-care companion with simple routines and gentle reminders.</p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="project-card project-card-link reveal"
+            href="details.html?type=project&amp;id=northstar"
+            aria-label="View Northstar Travel project details"
+            data-category="web"
+            data-project="northstar"
+          >
+            <div class="project-visual visual-north">
+              <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                alt="A quiet mountain lake at sunrise"
+                loading="lazy"
+              /><span class="visual-label"
+                >NORTH<br />STAR<span class="north-star">✳</span></span
+              ><span class="visual-arrow">↗</span>
+            </div>
+            <div class="project-caption">
+              <div>
+                <h3>Northstar Travel</h3>
+                <p>A refreshed travel brand that helps people find their next small escape.</p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="project-card project-card-link reveal"
+            href="details.html?type=project&amp;id=goodmood"
+            aria-label="View Goodmood project details"
+            data-category="product"
+            data-project="goodmood"
+          >
+            <div class="project-visual visual-mood">
+              <img
+                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=85"
+                alt="A peaceful morning meditation space by the water"
+                loading="lazy"
+              /><span class="visual-label"
+                >goodmood<span class="mood-dot">✳</span></span
+              ><span class="visual-arrow">↗</span>
+            </div>
+            <div class="project-caption">
+              <div>
+                <h3>Goodmood</h3>
+                <p>A mindful wellness app that makes short daily pauses feel easy.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="about-section section-wrap section-pad" id="about">
+        <div class="about-copy reveal">
+          <h2>
+            I build thoughtful<br /><span class="serif-accent">web experiences.</span>
+          </h2>
+          <p class="about-lead">
+            I’m Abir Ahmed Rahat, a frontend developer in Dhaka. I build clear,
+            responsive websites and useful React interfaces, bringing together
+            careful design and practical development.
+          </p>
+          <p class="about-detail">
+            I studied Law at the National University of Bangladesh, earning a
+            Bachelor of Arts, and completed Programming Hero’s Frontend Web
+            Developer program in 2025. My hands-on work includes responsive
+            Justice Law, Book Library, and Architecture portfolio projects. I
+            build with HTML, CSS, Tailwind, JavaScript, React, React Router,
+            REST APIs, and GitHub, focusing on accessible, easy-to-use
+            experiences across screen sizes.
+          </p>
+          <a class="button button-lime about-link" href="#contact"
+            >Hire me <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <figure class="about-photo reveal">
+          <img
+            class="about-photo-image"
+            src="assets/rahat-portrait.png"
+            alt="Portrait of Abir Ahmed Rahat"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </section>
+      <section class="skills-section section-wrap section-pad" id="skills">
+        <div class="section-heading reveal">
+          <div>
+            <h2>
+              Tools I use to<br /><span class="serif-accent"
+                >make it work.</span
+              >
+            </h2>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card skill-html reveal" title="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy" />
+            <h3>HTML5</h3>
+          </article>
+          <article class="skill-card skill-css reveal" title="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy" />
+            <h3>CSS3</h3>
+          </article>
+          <article class="skill-card skill-tailwind reveal" title="Tailwind CSS">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy" />
+            <h3>Tailwind CSS</h3>
+          </article>
+          <article class="skill-card skill-js reveal" title="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy" />
+            <h3>JavaScript</h3>
+          </article>
+          <article class="skill-card skill-typescript reveal" title="TypeScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" loading="lazy" />
+            <h3>TypeScript</h3>
+          </article>
+          <article class="skill-card skill-react reveal" title="React.js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" />
+            <h3>React.js</h3>
+          </article>
+          <article class="skill-card skill-api reveal" title="REST APIs">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg" alt="" loading="lazy" />
+            <h3>REST APIs</h3>
+          </article>
+          <article class="skill-card skill-git reveal" title="Git">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" />
+            <h3>Git</h3>
+          </article>
+          <article class="skill-card skill-github reveal" title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" loading="lazy" />
+            <h3>GitHub</h3>
+          </article>
+          <article class="skill-card skill-router reveal" title="React Router">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" alt="" loading="lazy" />
+            <h3>React Router</h3>
+          </article>
+        </div>
+      </section>
+      <section class="services-section section-wrap section-pad" id="services">
+        <div class="section-heading reveal">
+          <div>
+            <h2>
+              Pages made for<br /><span class="serif-accent">real ideas.</span>
+            </h2>
+          </div>
+        </div>
+        <div class="service-grid">
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=landing-pages" aria-label="Learn more about landing pages">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">↗</span>
+            </div>
+            <h3>Landing pages</h3>
+            <p>
+              Focused pages for a product launch, campaign, or personal brand,
+              built to explain your offer and guide visitors to act.
+            </p>
+          </a>
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=ecommerce-pages" aria-label="Learn more about e-commerce pages">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">▦</span>
+            </div>
+            <h3>E-commerce pages</h3>
+            <p>
+              Product listings and detail pages with clear navigation, polished
+              shopping flows, and API-connected product data.
+            </p>
+          </a>
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=portfolio-sites" aria-label="Learn more about architecture and portfolio websites">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">◫</span>
+            </div>
+            <h3>Architecture &amp; portfolio sites</h3>
+            <p>
+              Image-led websites for architects, studios, and creatives, with
+              project galleries that let the work take center stage.
+            </p>
+          </a>
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=react-development" aria-label="Learn more about React development">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">&lt;/&gt;</span>
+            </div>
+            <h3>React development</h3>
+            <p>
+              Reusable React components and interactive interfaces, organized
+              into readable code that’s easier to extend.
+            </p>
+          </a>
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=api-integration" aria-label="Learn more about API integration">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">⌁</span>
+            </div>
+            <h3>API integration</h3>
+            <p>
+              Connect your interface to REST APIs and display live content with
+              clear loading, empty, and error states.
+            </p>
+          </a>
+          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=responsive-redesign" aria-label="Learn more about responsive redesign">
+            <div class="service-top">
+              <span class="service-symbol" aria-hidden="true">⌘</span>
+            </div>
+            <h3>Responsive redesign</h3>
+            <p>
+              Improve an existing site across mobile, tablet, and desktop with
+              cleaner layouts, better spacing, and smoother interactions.
+            </p>
+          </a>
+        </div>
+      </section>
+      <section class="testimonial-section section-pad" id="testimonials">
+        <div class="section-wrap testimonial-inner">
+          <div class="testimonial-heading reveal">
+            <h2>
+              Nice things<br />from
+              <span class="serif-accent">nice people.</span>
+            </h2>
+            <p>Good work gets better when you make it together.</p>
+            <div class="carousel-controls">
+              <button
+                type="button"
+                class="carousel-arrow"
+                id="testimonialPrev"
+                aria-label="Previous testimonial"
+              >
+                ←
+              </button>
+              <span class="carousel-progress"
+                ><span id="carouselIndex">01</span><i>/</i><span id="carouselTotal">06</span></span
+              >
+              <button
+                type="button"
+                class="carousel-arrow"
+                id="testimonialNext"
+                aria-label="Next testimonial"
+              >
+                →
+              </button>
+            </div>
+          </div>
+          <div
+            class="testimonial-stage reveal"
+            id="testimonialStage"
+            aria-live="polite"
+          >
+            <article class="quote-card" data-index="0">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Abir Ahmed Rahat brought a rare mix of creativity and calm to our project.
+                The finished site feels like us, only clearer and a lot more
+                alive.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of client Maya"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Maya Rahman</strong><span>Founder, Folio Studio</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card" data-index="1">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Every detail felt considered, from the first prototype to the
+                final handoff. We shipped faster, and our customers noticed the
+                difference.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of client Sami"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Sami Chowdhury</strong
+                  ><span>Product Lead, Flora</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card" data-index="2">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                He listened, asked smart questions, then made the complex feel
+                easy. I’d work with Abir Ahmed Rahat again in a heartbeat.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of client Noor"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Noor Ahmed</strong
+                  ><span>Creative Director, Northstar</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card" data-index="3">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                Abir Ahmed Rahat translated our early direction into an interface that felt
+                clear from the first click. Every revision was thoughtful, and
+                the final result felt true to our team.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of a sample client"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Nadia Karim</strong><span>Founder, Daylight</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card" data-index="4">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                The frontend feels polished, loads quickly, and is simple for
+                our team to maintain. The whole process stayed collaborative
+                from prototype through handoff.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of a sample client"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Arif Mahmud</strong><span>Product Lead, Kora</span>
+                </div>
+              </div>
+            </article>
+            <article class="quote-card" data-index="5">
+              <div class="quote-mark">“</div>
+              <blockquote>
+                We needed someone who could bridge design and development.
+                Abir Ahmed Rahat brought care to the details and made the final experience
+                feel effortless.
+              </blockquote>
+              <div class="quote-person">
+                <img
+                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80"
+                  alt="Portrait of a sample client"
+                  loading="lazy"
+                />
+                <div>
+                  <strong>Priya Sen</strong><span>Design Lead, Atelier</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section section-wrap section-pad" id="faq">
+        <div class="faq-heading reveal">
+          <div class="faq-heading-main">
+            <h2>Good questions.<br /><span class="serif-accent">Clear answers.</span></h2>
+          </div>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>
+              <span class="faq-question">What kind of projects do you take on?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              I work with early-stage teams, independent founders, and creative
+              studios on websites, product interfaces, and frontend builds. If
+              you care about the details, we’ll probably get along.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">What does working together look like?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              We start with a short conversation to understand the people,
+              goals, and scope. From there I share a clear plan, regular
+              progress updates, and a collaborative review before handoff.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">Can you work with an existing design?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              Absolutely. I can partner with your designer or team to bring an
+              existing Figma file to life, refine responsive behavior, and make
+              sure the implementation feels as good as it looks.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">Are you available for freelance work?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              I take on a small number of projects at a time. Share a little
+              about your idea and timeline, and I’ll get back to you with
+              availability and next steps.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">How long does a typical project take?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              It depends on the scope and complexity. Once I understand your
+              goals, I’ll share a realistic timeline and keep you updated at
+              each step.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="faq-question">Can you help after the website launches?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </summary>
+            <p>
+              Yes. I can help with follow-up fixes and improvements after
+              launch, with ongoing support arranged around your needs.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="contact-section" id="contact">
+        <div class="contact-decoration" aria-hidden="true"></div>
+        <div class="contact-layout section-wrap">
+          <div class="contact-content reveal">
+            <div class="contact-kicker"><span aria-hidden="true">✳</span> LET’S TALK IDEAS</div>
+            <h2>
+              Have a good<br />one in <span class="serif-accent">mind?</span>
+            </h2>
+            <p>
+              Tell me what you’re dreaming up. I’ll bring the good questions.
+            </p>
+          </div>
+          <form
+            class="contact-form reveal"
+            id="contactForm"
+            action="https://formsubmit.co/ajax/abirahmedrahat18@gmail.com"
+            method="POST"
+            aria-labelledby="contactFormTitle"
+          >
+            <input type="hidden" name="_subject" value="New portfolio inquiry for Abir Ahmed Rahat" />
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <h3 class="contact-form-heading" id="contactFormTitle">Project details</h3>
+            <label class="contact-field"
+              ><span>Your name</span
+              ><input
+                name="name"
+                type="text"
+                placeholder="How should I address you?"
+                autocomplete="name"
+                required
+            /></label>
+            <label class="contact-field"
+              ><span>Email address</span
+              ><input
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+            /></label>
+            <label class="contact-field"
+              ><span>A little about the project</span
+              ><textarea
+                name="message"
+                rows="3"
+                placeholder="What are you hoping to make?"
+                required
+              ></textarea>
+            </label>
+            <div class="contact-form-bottom">
+              <button class="button button-lime" type="submit">
+                Send a message <span aria-hidden="true">↗</span></button
+              >
+            </div>
+            <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-signoff">
+        <div class="footer-signoff-copy">
+          <span>FRONTEND / FINISHED WITH CARE</span>
+          <p>Good ideas,<br /><em>well made.</em></p>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="footer-brand-block">
+          <a class="brand" href="#hero" aria-label="Abir Ahmed Rahat home"
+            ><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" focusable="false"><path class="brand-mark-shell" d="M20 3.8 34.2 12v16L20 36.2 5.8 28V12z"/><path d="m11.5 26.5 7-14h3l7 14M14.5 21h11M25.5 27l4-8"/></svg></span
+            ><span class="brand-name"
+              >&lt;rahat<span class="text-lime">/</span>dev&gt;</span
+            ></a
+          >
+          <p>Abir Ahmed Rahat · Thoughtful digital work, built with care.</p>
+        </div>
+        <div class="footer-column">
+          <span class="footer-label">EXPLORE</span>
+          <a href="#work">Project</a><a href="#about">About me</a
+          ><a href="#skills">My Skills</a>
+        </div>
+        <div class="footer-column">
+          <span class="footer-label">FIND ME</span>
+          <a href="https://www.linkedin.com/in/abirahmedrahat/?isSelfProfile=true" target="_blank" rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a href="https://github.com/AbirRahat18" target="_blank" rel="noreferrer"
+            >GitHub ↗</a
+          >
+          <a href="mailto:abirahmedrahat18@gmail.com">Email ↗</a>
+        </div>
+          <a href="#hero" class="footer-back-top">BACK TO TOP <span>↑</span></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 ABIR AHMED RAHAT</span>
+        <span>DHAKA, BANGLADESH</span>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
