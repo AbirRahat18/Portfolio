@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1914 >>
+stream
+q
+0.043 0.078 0.141 rg 0 0 612 792 re f
+0.776 0.953 0.416 rg 0 0 8 792 re f
+0.776 0.953 0.416 rg BT /F2 9 Tf 54 746 Td (PORTFOLIO CV) Tj ET
+0.95 0.97 0.99 rg BT /F2 32 Tf 54 692 Td (Abir Ahmed Rahat) Tj ET
+0.776 0.953 0.416 rg BT /F2 12 Tf 54 667 Td (FRONTEND DEVELOPER) Tj ET
+0.83 0.88 0.94 rg BT /F1 10 Tf 54 638 Td (Dhaka, Bangladesh  |  abirahmedrahat18@gmail.com) Tj ET
+0.24 0.34 0.47 RG 54 614 m 558 614 l S
+0.776 0.953 0.416 rg BT /F2 10 Tf 54 580 Td (PROFILE) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 554 Td (Frontend developer based in Dhaka, building clear, responsive websites) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 536 Td (and React interfaces. I work with founders, teams, and creatives to) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 518 Td (turn ideas into thoughtful, easy-to-use digital experiences.) Tj ET
+0.24 0.34 0.47 RG 54 493 m 558 493 l S
+0.776 0.953 0.416 rg BT /F2 10 Tf 54 462 Td (CORE SKILLS) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 436 Td (HTML5  |  CSS3  |  Tailwind CSS  |  JavaScript  |  React.js) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 418 Td (React Router  |  REST APIs  |  Git  |  GitHub) Tj ET
+0.24 0.34 0.47 RG 54 393 m 558 393 l S
+0.776 0.953 0.416 rg BT /F2 10 Tf 54 362 Td (WHAT I BUILD) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 336 Td (Responsive landing pages and ecommerce experiences) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 316 Td (Reusable React interfaces and accessible UI components) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 296 Td (Frontend integrations with REST APIs) Tj ET
+0.24 0.34 0.47 RG 54 271 m 558 271 l S
+0.776 0.953 0.416 rg BT /F2 10 Tf 54 240 Td (FIND ME ONLINE) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 214 Td (GitHub  |  github.com/AbirRahat18) Tj ET
+0.83 0.88 0.94 rg BT /F1 11 Tf 54 194 Td (LinkedIn  |  linkedin.com/in/abirahmedrahat) Tj ET
+0.776 0.953 0.416 rg 54 105 28 2 re f
+0.75 0.80 0.87 rg BT /F2 9 Tf 54 80 Td (OPEN TO SELECT PROJECTS) Tj ET
+Q
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2362
+%%EOF

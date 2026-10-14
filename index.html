@@ -6,8 +6,17 @@
     <meta name="theme-color" content="#0b1424" />
     <meta
       name="description"
-      content="Abir Ahmed Rahat is an independent frontend developer in Dhaka building thoughtful, high-performing digital experiences."
+      content="Abir Ahmed Rahat is a Dhaka-based frontend web developer creating responsive websites, landing pages, e-commerce experiences, and React interfaces."
     />
+    <meta name="author" content="Abir Ahmed Rahat" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Abir Ahmed Rahat — Frontend Developer" />
+    <meta property="og:title" content="Abir Ahmed Rahat — Frontend Web Developer in Dhaka" />
+    <meta property="og:description" content="Responsive websites, landing pages, e-commerce experiences, and React interfaces built with care." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Abir Ahmed Rahat — Frontend Web Developer" />
+    <meta name="twitter:description" content="Dhaka-based frontend developer creating thoughtful, responsive websites and interfaces." />
     <title>Abir Ahmed Rahat — Frontend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,36 +24,35 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script>
-      window.tailwind = {
-        config: {
-          theme: {
-            extend: {
-              colors: { ink: "#0b1424", lime: "#c6f36a", paper: "#f3f6fb" },
-              fontFamily: {
-                sans: ["Plus Jakarta Sans", "sans-serif"],
-                heading: ["Plus Jakarta Sans", "sans-serif"],
-                body: ["Plus Jakarta Sans", "sans-serif"],
-                mono: ["Plus Jakarta Sans", "sans-serif"],
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abir Ahmed Rahat",
+        "jobTitle": "Frontend Web Developer",
+        "email": "abirahmedrahat18@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressCountry": "BD"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/abirahmedrahat/",
+          "https://github.com/AbirRahat18"
+        ]
+      }
+    </script>
   </head>
-  <body
-    class="bg-ink font-body text-paper antialiased selection:bg-lime selection:text-ink"
-  >
+  <body class="portfolio-site">
     <div class="page-grain" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header" id="top">
       <nav class="nav-shell" aria-label="Main navigation">
         <a class="brand" href="#hero" aria-label="Abir Ahmed Rahat home"
-          ><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" focusable="false"><path class="brand-mark-shell" d="M20 3.8 34.2 12v16L20 36.2 5.8 28V12z"/><path d="m11.5 26.5 7-14h3l7 14M14.5 21h11M25.5 27l4-8"/></svg></span
-          ><span class="brand-name"
-            >&lt;rahat<span class="text-lime">/</span>dev&gt;</span
+          ><img class="brand-mark" src="img/rahat-mark.svg" alt="" width="42" height="42"
+          /><span class="brand-name"
+            >RAHAT<span class="text-lime">.</span>DEV</span
           ></a
         >
         <button
@@ -65,7 +73,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section class="hero section-wrap" id="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <div class="eyebrow">
@@ -77,16 +85,17 @@
           <h1 id="hero-title">
             <span class="hero-title-line">Frontend</span>
             <span class="hero-title-line hero-title-accent">
-              Web Developer<span class="hero-spark" aria-hidden="true"></span>
+              Web Developer
             </span>
           </h1>
           <p class="hero-intro">
-            I design and build fast, responsive websites and React interfaces
-            that turn good ideas into clear, useful digital experiences.
+            I’m a  frontend web developer. I create responsive
+            websites and React interfaces that help people understand a product
+            and take the next step with confidence.
           </p>
           <div class="hero-actions">
-            <a class="button button-lime " href="#contact">
-              Hire me <span aria-hidden="true">↗</span>
+            <a class="button button-lime" href="#contact">
+              Hire me ↗
             </a>
             <a class="button button-outline" href="assets/abir-ahmed-rahat-cv.pdf" download="Abir-Ahmed-Rahat-CV.pdf">
               Download CV <span aria-hidden="true">↓</span>
@@ -102,7 +111,7 @@
           <div class="portrait-wrap">
             <img
               class="portrait"
-              src="assets/rahat-portrait.jpg"
+              src="img/rahat-portrait.jpg"
               alt="Portrait of Abir Ahmed Rahat"
               fetchpriority="high"
             />
@@ -111,143 +120,98 @@
           <span class="hero-code-mark hero-code-braces" aria-hidden="true">{ }</span>
         </div>
       </section>
-      <section class="ticker" aria-label="What I do">
-        <div class="ticker-track" aria-hidden="true">
-          <div class="ticker-group">
-            <span>Thoughtful interfaces</span><i></i>
-            <span>Design to development</span><i></i>
-            <span>Built for people</span><i></i>
-            <span>Frontend by Abir Ahmed Rahat</span><i></i>
-          </div>
-          <div class="ticker-group">
-            <span>Thoughtful interfaces</span><i></i>
-            <span>Design to development</span><i></i>
-            <span>Built for people</span><i></i>
-            <span>Frontend by Abir Ahmed Rahat</span><i></i>
-          </div>
-        </div>
-      </section>
       <section class="work-section section-wrap section-pad" id="work">
         <div class="section-heading reveal">
           <div>
             <h2>
-              A few things<br />I’ve
-              <span class="serif-accent">put out  </span>  there.
+              <span class="serif-accent">Project</span>
             </h2>
-            <p class="section-description">Selected websites and product experiences, designed to feel clear, useful, and memorable.</p>
           </div>
         </div>
         <div class="work-toolbar reveal">
           <div class="filter-list" role="group" aria-label="Filter projects">
-            <button class="filter-chip active" type="button" data-filter="all">
-              All work
+            <button class="filter-chip active" type="button" data-filter="all" aria-pressed="true">
+              All projects
             </button>
-            <button class="filter-chip" type="button" data-filter="web">
+            <button class="filter-chip" type="button" data-filter="web" aria-pressed="false">
               Web design
             </button>
-            <button class="filter-chip" type="button" data-filter="product">
+            <button class="filter-chip" type="button" data-filter="product" aria-pressed="false">
               Product
             </button>
           </div>
         </div>
-        <div class="project-grid" id="projectGrid">
-          <a
-            class="project-card project-card-link reveal"
-            href="details.html?type=project&amp;id=folio"
-            aria-label="View Folio Studio project details"
-            data-category="web"
-            data-project="folio"
-          >
+        <div class="project-grid" id="projectGrid" aria-live="polite">
+          <article class="project-card reveal" data-category="web">
+            <div class="project-visual visual-launch">
+              <img
+                src="img/project-launch.jpg"
+                alt="Laptop displaying a modern analytics dashboard"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="visual-label">NORTHSTAR<br />LAUNCH</span>
+              <span class="project-type">LANDING PAGE CONCEPT</span>
+              <a class="project-link" href="#contact" aria-label="Discuss the Northstar Launch concept">↗</a>
+            </div>
+            <div class="project-caption">
+              <h3>Northstar Launch</h3>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="product">
+            <div class="project-visual visual-commerce">
+              <img
+                src="img/project-store.jpg"
+                alt="Contemporary clothing display inside a boutique"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="visual-label">COMMON<br />GROUND</span>
+              <span class="project-type">E-COMMERCE CONCEPT</span>
+              <a class="project-link" href="#contact" aria-label="Discuss the Common Ground concept">↗</a>
+            </div>
+            <div class="project-caption">
+              <h3>Common Ground</h3>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="web">
+            <div class="project-visual visual-hiking">
+              <img
+                src="img/project-hike.jpg"
+                alt="A rocky hiking trail crossing a mountain slope"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="visual-label">BEYOND<br />THE RIDGE</span>
+              <span class="project-type">HIKING TRAVEL CONCEPT</span>
+              <a class="project-link" href="#contact" aria-label="Discuss the Beyond the Ridge concept">↗</a>
+            </div>
+            <div class="project-caption">
+              <h3>Beyond the Ridge</h3>
+            </div>
+          </article>
+          <article class="project-card reveal" data-category="web">
             <div class="project-visual visual-folio">
               <img
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
-                alt="Minimal creative studio workspace with warm afternoon light"
+                src="img/project-studio.jpg"
+                alt="A bright, contemporary creative studio workspace"
                 loading="lazy"
-              /><span class="visual-label visual-label-dark">FOLIO</span
-              ><span class="visual-arrow">↗</span>
+                decoding="async"
+              />
+              <span class="visual-label">FOLIO<br />STUDIO</span>
+              <span class="project-type">CREATIVE PORTFOLIO CONCEPT</span>
+              <a class="project-link" href="#contact" aria-label="Discuss the Folio Studio concept">↗</a>
             </div>
             <div class="project-caption">
-              <div>
-                <h3>Folio Studio</h3>
-                <p>An image-led portfolio that gives a small creative studio a clear digital home.</p>
-              </div>
+              <h3>Folio Studio</h3>
             </div>
-          </a>
-          <a
-            class="project-card project-card-link reveal"
-            href="details.html?type=project&amp;id=flora"
-            aria-label="View Flora project details"
-            data-category="product"
-            data-project="flora"
-          >
-            <div class="project-visual visual-flora">
-              <img
-                src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1000&q=85"
-                alt="Sunlit plants and a calm home interior"
-                loading="lazy"
-              /><span class="visual-label"
-                >flora<span class="flora-dot">.</span></span
-              ><span class="visual-arrow">↗</span>
-            </div>
-            <div class="project-caption">
-              <div>
-                <h3>Flora</h3>
-                <p>A friendly plant-care companion with simple routines and gentle reminders.</p>
-              </div>
-            </div>
-          </a>
-          <a
-            class="project-card project-card-link reveal"
-            href="details.html?type=project&amp;id=northstar"
-            aria-label="View Northstar Travel project details"
-            data-category="web"
-            data-project="northstar"
-          >
-            <div class="project-visual visual-north">
-              <img
-                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
-                alt="A quiet mountain lake at sunrise"
-                loading="lazy"
-              /><span class="visual-label"
-                >NORTH<br />STAR<span class="north-star">✳</span></span
-              ><span class="visual-arrow">↗</span>
-            </div>
-            <div class="project-caption">
-              <div>
-                <h3>Northstar Travel</h3>
-                <p>A refreshed travel brand that helps people find their next small escape.</p>
-              </div>
-            </div>
-          </a>
-          <a
-            class="project-card project-card-link reveal"
-            href="details.html?type=project&amp;id=goodmood"
-            aria-label="View Goodmood project details"
-            data-category="product"
-            data-project="goodmood"
-          >
-            <div class="project-visual visual-mood">
-              <img
-                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=85"
-                alt="A peaceful morning meditation space by the water"
-                loading="lazy"
-              /><span class="visual-label"
-                >goodmood<span class="mood-dot">✳</span></span
-              ><span class="visual-arrow">↗</span>
-            </div>
-            <div class="project-caption">
-              <div>
-                <h3>Goodmood</h3>
-                <p>A mindful wellness app that makes short daily pauses feel easy.</p>
-              </div>
-            </div>
-          </a>
+          </article>
         </div>
       </section>
       <section class="about-section section-wrap section-pad" id="about">
         <div class="about-copy reveal">
           <h2>
-            I build thoughtful<br /><span class="serif-accent">web experiences.</span>
+            Websites with <span class="serif-accent">purpose.</span>
           </h2>
           <p class="about-lead">
             I’m Abir Ahmed Rahat, a frontend developer in Dhaka. I build clear,
@@ -270,7 +234,7 @@
         <figure class="about-photo reveal">
           <img
             class="about-photo-image"
-            src="assets/rahat-portrait.png"
+            src="img/rahat-portrait-about.png"
             alt="Portrait of Abir Ahmed Rahat"
             loading="lazy"
             decoding="async"
@@ -281,134 +245,108 @@
         <div class="section-heading reveal">
           <div>
             <h2>
-              Tools I use to<br /><span class="serif-accent"
-                >make it work.</span
-              >
+              Skills
             </h2>
           </div>
         </div>
         <div class="skills-grid">
           <article class="skill-card skill-html reveal" title="HTML5">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/html5.svg" alt="" loading="lazy" />
             <h3>HTML5</h3>
           </article>
           <article class="skill-card skill-css reveal" title="CSS3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/css3.svg" alt="" loading="lazy" />
             <h3>CSS3</h3>
           </article>
           <article class="skill-card skill-tailwind reveal" title="Tailwind CSS">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/tailwindcss.svg" alt="" loading="lazy" />
             <h3>Tailwind CSS</h3>
           </article>
           <article class="skill-card skill-js reveal" title="JavaScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/javascript.svg" alt="" loading="lazy" />
             <h3>JavaScript</h3>
           </article>
           <article class="skill-card skill-typescript reveal" title="TypeScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/typescript.svg" alt="" loading="lazy" />
             <h3>TypeScript</h3>
           </article>
           <article class="skill-card skill-react reveal" title="React.js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/react.svg" alt="" loading="lazy" />
             <h3>React.js</h3>
           </article>
           <article class="skill-card skill-api reveal" title="REST APIs">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/swagger.svg" alt="" loading="lazy" />
             <h3>REST APIs</h3>
           </article>
           <article class="skill-card skill-git reveal" title="Git">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/git.svg" alt="" loading="lazy" />
             <h3>Git</h3>
           </article>
           <article class="skill-card skill-github reveal" title="GitHub">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/github.svg" alt="" loading="lazy" />
             <h3>GitHub</h3>
           </article>
           <article class="skill-card skill-router reveal" title="React Router">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactrouter/reactrouter-original.svg" alt="" loading="lazy" />
+            <img src="img/icons/reactrouter.svg" alt="" loading="lazy" />
             <h3>React Router</h3>
           </article>
         </div>
       </section>
       <section class="services-section section-wrap section-pad" id="services">
         <div class="section-heading reveal">
-          <div>
-            <h2>
-              Pages made for<br /><span class="serif-accent">real ideas.</span>
-            </h2>
-          </div>
+          <div><h2><span class="serif-accent">Services</span></h2></div>
         </div>
         <div class="service-grid">
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=landing-pages" aria-label="Learn more about landing pages">
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">↗</span>
+              <img src="img/icons/landing.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>Landing pages</h3>
-            <p>
-              Focused pages for a product launch, campaign, or personal brand,
-              built to explain your offer and guide visitors to act.
-            </p>
-          </a>
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=ecommerce-pages" aria-label="Learn more about e-commerce pages">
+            <p>Get a clear, responsive page for your product, campaign, or business. It explains what you offer and makes it easy for visitors to take the next step.</p>
+          </article>
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">▦</span>
+              <img src="img/icons/store.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>E-commerce pages</h3>
-            <p>
-              Product listings and detail pages with clear navigation, polished
-              shopping flows, and API-connected product data.
-            </p>
-          </a>
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=portfolio-sites" aria-label="Learn more about architecture and portfolio websites">
+            <p>Make it easy for customers to browse products, compare details, and buy with confidence. Pages work smoothly on phones, tablets, and desktops.</p>
+          </article>
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">◫</span>
+              <img src="img/icons/architecture.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>Architecture &amp; portfolio sites</h3>
-            <p>
-              Image-led websites for architects, studios, and creatives, with
-              project galleries that let the work take center stage.
-            </p>
-          </a>
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=react-development" aria-label="Learn more about React development">
+            <p>Show your projects in image-led galleries and clear project pages. Help potential clients understand your work, style, and services.</p>
+          </article>
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">&lt;/&gt;</span>
+              <img src="img/icons/code.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>React development</h3>
-            <p>
-              Reusable React components and interactive interfaces, organized
-              into readable code that’s easier to extend.
-            </p>
-          </a>
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=api-integration" aria-label="Learn more about API integration">
+            <p>Build interactive websites with reusable React components. The code stays organized, so your site is easier to update and expand.</p>
+          </article>
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">⌁</span>
+              <img src="img/icons/api.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>API integration</h3>
-            <p>
-              Connect your interface to REST APIs and display live content with
-              clear loading, empty, and error states.
-            </p>
-          </a>
-          <a class="service-card service-card-link reveal" href="details.html?type=service&amp;id=responsive-redesign" aria-label="Learn more about responsive redesign">
+            <p>Connect your website to services that provide live data or receive form submissions. Show clear feedback while information loads or if something goes wrong.</p>
+          </article>
+          <article class="service-card reveal">
             <div class="service-top">
-              <span class="service-symbol" aria-hidden="true">⌘</span>
+              <img src="img/icons/responsive.svg" alt="" aria-hidden="true" width="36" height="36" />
             </div>
             <h3>Responsive redesign</h3>
-            <p>
-              Improve an existing site across mobile, tablet, and desktop with
-              cleaner layouts, better spacing, and smoother interactions.
-            </p>
-          </a>
+            <p>Improve an existing website with clearer navigation, readable content, and layouts that adapt to every screen size.</p>
+          </article>
         </div>
       </section>
       <section class="testimonial-section section-pad" id="testimonials">
         <div class="section-wrap testimonial-inner">
           <div class="testimonial-heading reveal">
             <h2>
-              Nice things<br />from
-              <span class="serif-accent">nice people.</span>
+              What <span class="serif-accent">clients say.</span>
             </h2>
-            <p>Good work gets better when you make it together.</p>
             <div class="carousel-controls">
               <button
                 type="button"
@@ -444,11 +382,7 @@
                 alive.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of client Maya"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">MR</span>
                 <div>
                   <strong>Maya Rahman</strong><span>Founder, Folio Studio</span>
                 </div>
@@ -462,11 +396,7 @@
                 difference.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of client Sami"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">SC</span>
                 <div>
                   <strong>Sami Chowdhury</strong
                   ><span>Product Lead, Flora</span>
@@ -480,11 +410,7 @@
                 easy. I’d work with Abir Ahmed Rahat again in a heartbeat.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of client Noor"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">NA</span>
                 <div>
                   <strong>Noor Ahmed</strong
                   ><span>Creative Director, Northstar</span>
@@ -499,11 +425,7 @@
                 the final result felt true to our team.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of a sample client"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">NK</span>
                 <div>
                   <strong>Nadia Karim</strong><span>Founder, Daylight</span>
                 </div>
@@ -517,11 +439,7 @@
                 from prototype through handoff.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of a sample client"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">AM</span>
                 <div>
                   <strong>Arif Mahmud</strong><span>Product Lead, Kora</span>
                 </div>
@@ -535,11 +453,7 @@
                 feel effortless.
               </blockquote>
               <div class="quote-person">
-                <img
-                  src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80"
-                  alt="Portrait of a sample client"
-                  loading="lazy"
-                />
+                <span class="quote-avatar" aria-hidden="true">PS</span>
                 <div>
                   <strong>Priya Sen</strong><span>Design Lead, Atelier</span>
                 </div>
@@ -551,7 +465,7 @@
       <section class="faq-section section-wrap section-pad" id="faq">
         <div class="faq-heading reveal">
           <div class="faq-heading-main">
-            <h2>Good questions.<br /><span class="serif-accent">Clear answers.</span></h2>
+            <h2>Questions</h2>
           </div>
         </div>
         <div class="faq-list reveal">
@@ -626,55 +540,41 @@
         <div class="contact-decoration" aria-hidden="true"></div>
         <div class="contact-layout section-wrap">
           <div class="contact-content reveal">
-            <div class="contact-kicker"><span aria-hidden="true">✳</span> LET’S TALK IDEAS</div>
             <h2>
-              Have a good<br />one in <span class="serif-accent">mind?</span>
+              Have a website project in <span class="serif-accent">mind?</span>
             </h2>
-            <p>
-              Tell me what you’re dreaming up. I’ll bring the good questions.
-            </p>
           </div>
           <form
             class="contact-form reveal"
             id="contactForm"
-            action="https://formsubmit.co/ajax/abirahmedrahat18@gmail.com"
+            action="https://formsubmit.co/abirahmedrahat18@gmail.com"
+            data-ajax-action="https://formsubmit.co/ajax/abirahmedrahat18@gmail.com"
             method="POST"
             aria-labelledby="contactFormTitle"
           >
             <input type="hidden" name="_subject" value="New portfolio inquiry for Abir Ahmed Rahat" />
             <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <h3 class="contact-form-heading" id="contactFormTitle">Project details</h3>
-            <label class="contact-field"
-              ><span>Your name</span
-              ><input
-                name="name"
-                type="text"
-                placeholder="How should I address you?"
-                autocomplete="name"
-                required
-            /></label>
-            <label class="contact-field"
-              ><span>Email address</span
-              ><input
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-                autocomplete="email"
-                required
-            /></label>
-            <label class="contact-field"
-              ><span>A little about the project</span
-              ><textarea
-                name="message"
-                rows="3"
-                placeholder="What are you hoping to make?"
-                required
-              ></textarea>
+            <label class="contact-field">
+              <span>Your name</span>
+              <input name="name" type="text" placeholder="Name" autocomplete="name" required />
+            </label>
+            <label class="contact-field">
+              <span>Email address</span>
+              <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+            </label>
+            <label class="contact-field">
+              <span>Phone number</span>
+              <input name="phone" type="tel" placeholder="Phone" autocomplete="tel" />
+            </label>
+            <label class="contact-field">
+              <span>Project message</span>
+              <textarea name="message" rows="3" placeholder="Message" required></textarea>
             </label>
             <div class="contact-form-bottom">
               <button class="button button-lime" type="submit">
-                Send a message <span aria-hidden="true">↗</span></button
-              >
+                Send a message <span aria-hidden="true">↗</span>
+              </button>
             </div>
             <p class="contact-form-status" id="contactFormStatus" role="status" aria-live="polite" hidden></p>
           </form>
@@ -682,21 +582,14 @@
       </section>
     </main>
     <footer class="site-footer">
-      <div class="footer-signoff">
-        <div class="footer-signoff-copy">
-          <span>FRONTEND / FINISHED WITH CARE</span>
-          <p>Good ideas,<br /><em>well made.</em></p>
-        </div>
-      </div>
       <div class="footer-main">
         <div class="footer-brand-block">
           <a class="brand" href="#hero" aria-label="Abir Ahmed Rahat home"
-            ><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" focusable="false"><path class="brand-mark-shell" d="M20 3.8 34.2 12v16L20 36.2 5.8 28V12z"/><path d="m11.5 26.5 7-14h3l7 14M14.5 21h11M25.5 27l4-8"/></svg></span
-            ><span class="brand-name"
-              >&lt;rahat<span class="text-lime">/</span>dev&gt;</span
+            ><img class="brand-mark" src="img/rahat-mark.svg" alt="" width="42" height="42"
+            /><span class="brand-name"
+              >RAHAT<span class="text-lime">.</span>DEV</span
             ></a
           >
-          <p>Abir Ahmed Rahat · Thoughtful digital work, built with care.</p>
         </div>
         <div class="footer-column">
           <span class="footer-label">EXPLORE</span>

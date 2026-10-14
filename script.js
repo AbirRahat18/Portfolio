@@ -1,27 +1,12 @@
 document.documentElement.classList.add('js');
 
-const scrollTicker = document.querySelector('.ticker-track');
-const tickerCycle = scrollTicker?.querySelector('.ticker-group');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let tickerFrame = 0;
-let tickerCycleWidth = 0;
+const siteHeader = document.querySelector('.site-header');
+const updateHeaderTransparency = () => {
+  siteHeader?.classList.toggle('is-scrolled', window.scrollY > 24);
+};
 
-function syncScrollTicker() {
-  tickerFrame = 0;
-  if (!scrollTicker || !tickerCycle || reduceMotion.matches) return;
-  tickerCycleWidth = tickerCycle.getBoundingClientRect().width;
-  if (!tickerCycleWidth) return;
-  const offset = (window.scrollY * 0.24) % tickerCycleWidth;
-  scrollTicker.style.transform = `translate3d(-${offset}px, 0, 0)`;
-}
-
-function queueTickerSync() {
-  if (!tickerFrame) tickerFrame = window.requestAnimationFrame(syncScrollTicker);
-}
-
-window.addEventListener('scroll', queueTickerSync, { passive: true });
-window.addEventListener('resize', queueTickerSync, { passive: true });
-syncScrollTicker();
+window.addEventListener('scroll', updateHeaderTransparency, { passive: true });
+updateHeaderTransparency();
 
 const navToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -44,64 +29,90 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });
 
-document.querySelectorAll('.filter-chip').forEach((button) => {
+const filterButtons = [...document.querySelectorAll('.filter-chip')];
+const projectCards = [...document.querySelectorAll('.project-card')];
+const projectGrid = document.querySelector('#projectGrid');
+
+filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    document.querySelectorAll('.filter-chip').forEach((chip) => chip.classList.toggle('active', chip === button));
-    document.querySelectorAll('.project-card').forEach((card) => {
-      card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.category !== filter);
+    const filter = button.dataset.filter || 'all';
+    projectGrid?.classList.toggle('is-filtered', filter !== 'all');
+
+    filterButtons.forEach((chip) => {
+      const selected = chip === button;
+      chip.classList.toggle('active', selected);
+      chip.setAttribute('aria-pressed', String(selected));
+    });
+
+    projectCards.forEach((card) => {
+      const shouldShow = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !shouldShow;
+      card.classList.toggle('is-hidden', !shouldShow);
     });
   });
 });
 
 const contactForm = document.querySelector('#contactForm');
 const contactFormStatus = document.querySelector('#contactFormStatus');
-contactForm?.addEventListener('submit', (event) => {
+
+function showFormStatus(message, state) {
+  if (!contactFormStatus) return;
+  contactFormStatus.textContent = message;
+  contactFormStatus.dataset.state = state;
+  contactFormStatus.hidden = false;
+}
+
+contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (!contactForm.reportValidity()) return;
 
+  const honeypot = contactForm.querySelector('[name="_honey"]');
+  if (honeypot?.value) return;
+
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const originalButtonText = submitButton?.innerHTML;
-  const formFields = Object.fromEntries(new FormData(contactForm).entries());
-  formFields._replyto = formFields.email;
+  const fields = Object.fromEntries(new FormData(contactForm).entries());
+  fields._replyto = fields.email;
+
   if (contactFormStatus) {
     contactFormStatus.hidden = true;
     contactFormStatus.textContent = '';
+    delete contactFormStatus.dataset.state;
   }
   if (submitButton) {
     submitButton.disabled = true;
     submitButton.textContent = 'Sending…';
   }
 
-  fetch(contactForm.action, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify(formFields),
-  })
-    .then(async (response) => {
-      const result = await response.json();
-      if (!response.ok || (result.success !== true && result.success !== 'true')) {
-        throw new Error(result.message || 'The message could not be sent.');
-      }
-      contactForm.reset();
-      if (contactFormStatus) {
-        contactFormStatus.textContent = 'Congrats! Your message was sent successfully. I’ll get back to you soon.';
-        contactFormStatus.hidden = false;
-      }
-    })
-    .catch((error) => {
-      const details = error instanceof Error ? error.message : 'Please try again.';
-      window.alert(`Your message could not be sent. Please try again or email abirahmedrahat18@gmail.com directly. ${details}`);
-    })
-    .finally(() => {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText || 'Send a message';
-      }
+  try {
+    const response = await fetch(contactForm.dataset.ajaxAction || contactForm.action, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(fields),
     });
+    const result = await response.json().catch(() => ({}));
+    const wasAccepted = result.success === true || result.success === 'true';
+
+    if (!response.ok || !wasAccepted) {
+      throw new Error(result.message || 'The message could not be sent.');
+    }
+
+    contactForm.reset();
+    showFormStatus('FormSubmit accepted your message. If this is the first submission, check your Gmail Inbox and Spam for a form activation email, then confirm it to receive messages.', 'success');
+  } catch (error) {
+    const reason = error instanceof Error && error.message
+      ? ` (${error.message})`
+      : '';
+    showFormStatus(`Your message could not be sent${reason}. Please email abirahmedrahat18@gmail.com directly.`, 'error');
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText || 'Send a message';
+    }
+  }
 });
 
 const testimonialCards = [...document.querySelectorAll('.quote-card')];
@@ -111,17 +122,20 @@ let activeTestimonial = 0;
 
 function showTestimonial(nextIndex) {
   if (!testimonialCards.length) return;
+
   activeTestimonial = (nextIndex + testimonialCards.length) % testimonialCards.length;
   testimonialCards.forEach((card, index) => {
     let offset = index - activeTestimonial;
     if (offset > testimonialCards.length / 2) offset -= testimonialCards.length;
     if (offset < -testimonialCards.length / 2) offset += testimonialCards.length;
-    card.dataset.position = String(offset);
+
     const isActive = offset === 0;
+    card.dataset.position = String(offset);
     card.classList.toggle('is-active', isActive);
     card.setAttribute('aria-hidden', String(!isActive));
     card.inert = !isActive;
   });
+
   if (indexLabel) indexLabel.textContent = String(activeTestimonial + 1).padStart(2, '0');
   if (totalLabel) totalLabel.textContent = String(testimonialCards.length).padStart(2, '0');
 }
@@ -147,6 +161,10 @@ testimonialRegion?.addEventListener('mouseenter', stopCarousel);
 testimonialRegion?.addEventListener('mouseleave', startCarousel);
 testimonialRegion?.addEventListener('focusin', stopCarousel);
 testimonialRegion?.addEventListener('focusout', startCarousel);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopCarousel();
+  else startCarousel();
+});
 startCarousel();
 
 const revealItems = document.querySelectorAll('.reveal');
